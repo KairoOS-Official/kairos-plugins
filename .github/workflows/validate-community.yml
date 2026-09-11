@@ -1,0 +1,50 @@
+name: Validate Community Submission
+
+on:
+  push:
+    paths:
+      - 'community/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate community folders
+        run: |
+          for dir in community/*/; do
+            name=$(basename "$dir")
+
+            # Vérifier le préfixe pseudo-
+            if [[ "$name" != *"-"* ]]; then
+              echo "❌ $name: missing prefix (must be yourname-pluginname)"
+              exit 1
+            fi
+
+            # Vérifier plugin.json
+            if [ ! -f "$dir/plugin.json" ]; then
+              echo "❌ $name: missing plugin.json"
+              exit 1
+            fi
+
+            # Vérifier preview.png
+            if [ ! -f "$dir/preview.png" ]; then
+              echo "❌ $name: missing preview.png"
+              exit 1
+            fi
+
+            # Vérifier README.md
+            if [ ! -f "$dir/README.md" ]; then
+              echo "❌ $name: missing README.md"
+              exit 1
+            fi
+
+            # Vérifier pas de .exe
+            if find "$dir" -name "*.exe" | grep -q .; then
+              echo "❌ $name: .exe files are not allowed"
+              exit 1
+            fi
+
+            echo "✅ $name: valid"
+          done
