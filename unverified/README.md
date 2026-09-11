@@ -22,7 +22,7 @@ Tous les plugins non vérifiés s'exécutent en **sandbox** :
 
 ### Sources recommandées
 
-1. **GitHub** : Cherchez des repos avec le topic [`kairoos-plugins`](https://github.com/topics/kairoos-plugins)
+1. **GitHub** : Cherchez des repos avec le topic [`kairo-plugins`](https://github.com/topics/kairo-plugins)
 2. **Discord** : Canal #community-plugins
 3. **GitHub Discussions** : [kairos-community](https://github.com/KairoOS-Official/kairos-community/discussions)
 
@@ -83,7 +83,7 @@ mon-plugin/
 ### Étapes
 
 1. Créez votre dépôt GitHub
-2. Ajoutez le topic `kairoos-plugins` dans les settings du repo
+2. Ajoutez le topic `kairo-plugins` dans les settings du repo
 3. Partagez l'URL :
    - **Discord** : canal #community-plugins
    - **GitHub** : Discussion dans [kairos-community](https://github.com/KairoOS-Official/kairos-community/discussions)
