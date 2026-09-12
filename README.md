@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KairoOS-Official/KairoOS/main/public/logo.png?v=2" alt="KaïroOS" width="160" />
+</p>
+
 # 🔌 KaïroOS Plugins Store
 
 Dépôt officiel des plugins pour **KaïroOS** — le frontend d'arcade et de salon open source.
